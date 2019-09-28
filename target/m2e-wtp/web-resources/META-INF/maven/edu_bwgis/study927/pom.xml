@@ -1,0 +1,49 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>edu_bwgis</groupId>
+  <artifactId>study927</artifactId>
+  <packaging>war</packaging>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>study927 Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+  <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+    <!-- 解决文件报错 -->
+    <dependency>
+    <groupId>javax.servlet</groupId>
+    <artifactId>javax.servlet-api</artifactId>
+    <version>3.1.0</version>
+    </dependency>
+    <!-- 引入webSocket对象 自动就下载下来了，配置文件中自动下载
+    有一个第三方的服务器将可能用到的jar包放在代码仓库里面去，通过引入自动下载下来
+    -->
+    
+    <dependency>
+    	<groupId>javax</groupId>
+    	<artifactId>javaee-api</artifactId>
+    	<version>8.0.1</version>
+    	<scope>provided</scope>
+    </dependency>
+    <dependency>
+    	<groupId>javax.websocket</groupId>
+    	<artifactId>javax.websocket-api</artifactId>
+    	<version>1.1</version>
+    	<scope>provided</scope>
+    </dependency>
+    <!--下载一个用于项目打包的war包 编译成war包能调用 -->
+    <dependency>
+    	<groupId>org.apache.maven.plugins</groupId>
+    	<artifactId>maven-war-plugin</artifactId>
+    	<version>3.0.0</version>
+    </dependency>
+  </dependencies>
+  <build>
+    <finalName>study927</finalName>
+  </build>
+</project>
